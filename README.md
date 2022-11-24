@@ -12,4 +12,14 @@ JavaScript is a scripting language primarily used in interactive web pages and a
 
 ## TABLE OF CONTENT
 
+### I- GETTING STARTED
 
+1. **[INTRODUCTIONS]()**
+2. [**DEVELOPER CONSOLE**]()
+3. **[Documentation]()**
+
+### III- FUNDAMENTALS
+
+1. **[Hello World]()**
+2. **[Syntax]()**
+3. **[Variables]()**
