@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //NOTE: exercice devinez un nombre entre 0 et 10
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * (max + 1));
+      }
+      result = getRandomInt(10);
+      for (let i = 0; i < 3; i++) {
+        let val = Number(prompt("Devinez la valeur: "));
+        if (val === result) {
+          alert("Congratulations");
+          break;
+        }
+        alert("Reessayez");
+      }
+
+        // NOTE: hello()
+        function hello() {
+          console.log("hello"); //NOTE: print hello
+        }
+        hello();
+        let an = () => {
+          console.log("hello");
+        };
+        an();
+        //COMMENT:Somme()
+        function somme(val1, val2) {
+          return Number(val1) + Number(val2); //NOTE: return a value
+        }
+        a = Number(prompt("Donnez une valeur", 1));
+        b = Number(prompt("Donnez une valeur", 1));
+        // console.log(somme(a, b));  //NOTE: print somme
+
+        //NOTE: pow(x,n) example
+        function pow(x, n) {
+          let value = x;
+          while (n > 1) {
+            value = value * x;
+            n--;
+          }
+          return value;
+        }
+        let x = Number(prompt("Entrez le nombre"));
+        let n = Number(prompt("Entrez la puissance"));
+        console.log(pow(x, n));
+    </script>
+  </head>
+  <body></body>
+</html>

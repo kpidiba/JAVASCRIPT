@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        
+      //NOTE: function sort
+      function sortStud(std) {
+        for (let i = 0; i < std.length; i++) {
+          for (let j = i + 1; j < std.length; j++) {
+            if (std[i].moyenne < std[j].moyenne) {
+              swap = std[i];
+              std[i] = std[j];
+              std[j] = swap;
+            }
+          }
+        }
+      }
+
+      //NOTE:function sort second method
+      function secondSortStud(std) {
+        const compareStudent = (a,b) => {
+          return b.moyenne - a.moyenne;
+        };
+        return std.sort(compareStudent);
+      }
+
+      // NOTE: calcul moyenne
+      function calculMoy(tab) {
+        let moy = 0;
+        for (let i = 0; i < tab.length; i++) {
+          moy += tab[i];
+        }
+
+        return moy / tab.length;
+      }
+
+      //NOTE: moyenne
+      function stats(std) {
+        for (let i of std) {
+          i.moyenne = calculMoy(i.notes);
+          i.worst = Math.min(...i.notes);
+        }
+        return std;
+      }
+      let students = [
+        {
+          name: "John",
+          notes: [1, 20, 18, 10, 13],
+        },
+        {
+          name: "Jane",
+          notes: [17, 15, 20, 13, 15],
+        },
+        {
+          name: "Sophie",
+          notes: [16, 15, 14, 18, 8],
+        },
+        {
+          name: "David",
+          notes: [18, 15, 13, 14.5, 17],
+        },
+      ];
+      students = stats(students);
+      console.log(students);
+
+      //   sortStud(students);
+      secondSortStud(students);
+      console.log(students);
+    </script>
+  </head>
+  <body></body>
+</html>

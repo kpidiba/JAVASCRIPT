@@ -2,7 +2,7 @@
 
 # DESCRIPTION
 
-JavaScript is a scripting language primarily used in interactive web pages and as such is an essential part of web applications. Along with HTML and CSS, JavaScript is at the heart of the languages ​​used by web developers
+JavaScript is a scripting language primarily used in interactive web pages and as such is an essential part of web applications. Along with HTML and CSS, JavaScript is at the heart of the languages ​​used by web developers,main script side browser.
 
 ## REQUIREMENTS
 
@@ -18,8 +18,13 @@ JavaScript is a scripting language primarily used in interactive web pages and a
 2. [**DEVELOPER CONSOLE**]()
 3. **[Documentation]()**
 
+### II- [RESSOURCES]()
+
 ### III- FUNDAMENTALS
 
 1. **[Hello World]()**
 2. **[Syntax]()**
 3. **[Variables]()**
+4. [**Conditions**]()
+5. [**Loops**]()
+6. [**Functions**]()

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+
+    <script>
+      const phrase =
+        "Vous ne savez pas qui $ je suis en ce moment ,monsieur zavisloscotch # mais...  je sais qui vous serez ga";
+      const re = /[\W_]/g; // or var re = /[^A-Za-z0-9]/g;
+      const freq = [];
+      const words = phrase.toLowerCase().replace(re, " ").split(" ");
+      for (let word of words) {
+        word !== "" ? (freq[word] ? freq[word]++ :freq[word] = 1):"nothing";
+      }
+      console.log(freq);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const year = 12;
+      let grade = prompt(
+        "In which year was the ECMAScript-2015 specification published?",
+        ""
+      );
+
+      if (year < 2015) {
+        alert("Too early...");
+      } else if (year > 2015) {
+        alert("Too late");
+      } else {
+        alert("Exactly!");
+      }
+
+      switch (grade) {
+               case 'A': document.write("Good job<br />");
+               break;
+            
+               case 'B': document.write("Pretty good<br />");
+               break;
+            
+               case 'C': document.write("Passed<br />");
+               break;
+            
+               case 'D': document.write("Not so good<br />");
+               break;
+            
+               case 'F': document.write("Failed<br />");
+               break;
+            
+               default:  document.write("Unknown grade<br />")
+            }
+    </script>
+  </head>
+  <body></body>
+</html>
