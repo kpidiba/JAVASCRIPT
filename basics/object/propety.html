@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let user = {
+        name: "John",
+      };
+
+      let descriptor = Object.getOwnPropertyDescriptor(user, "name");
+
+      console.log(JSON.stringify(descriptor, null, 2));
+      /* property descriptor:
+              {
+              "value": "John",
+              "writable": true,
+              "enumerable": true,
+              "configurable": true
+              }
+          */
+
+      //NOTE: Object.assign()
+      let man = { name: "John" };
+
+      let permissions1 = { canView: true };
+      let permissions2 = { canEdit: true };
+
+      // copies all properties from permissions1 and permissions2 into man
+      Object.assign(man, permissions1, permissions2);
+
+      // now man = { name: "John", canView: true, canEdit: true }
+      console.log(man.name); // John
+      console.log(man.canView); // true
+      console.log(man.canEdit); // true
+      man.canView = false;
+      console.log(permissions1.canView);
+      console.log(man.canView);
+    </script>
+  </head>
+  <body></body>
+</html>

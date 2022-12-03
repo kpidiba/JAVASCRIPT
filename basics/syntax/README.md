@@ -28,8 +28,6 @@ let area = (height ?? 100) * (width ?? 50);
 "jojo " + "is " + myPet
 ```
 
-
-
 ## Whitespace and Line Breaks
 
 JavaScript ignores spaces, tabs, and newlines that appear in JavaScript programs. You can use spaces, tabs, and newlines freely in your program and you are free to format and indent your programs in a neat and consistent way that makes the code easy to read and understand.
@@ -121,8 +119,6 @@ alert( isBoss ); // true if OK is pressed
 ```
 
 - **console.log()**: method **outputs a message to the web console**
-
-
 
 ### WHAT IS $ in javascript
 

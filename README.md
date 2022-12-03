@@ -28,3 +28,8 @@ JavaScript is a scripting language primarily used in interactive web pages and a
 4. [**Conditions**]()
 5. [**Loops**]()
 6. [**Functions**]()
+7. [**Prototypes**]()
+8. [**Object**]()
+9. [**Classes**]()
+10. [**...**]()
+11. 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //NOTE: createe an object
+      let user = {
+        name: "david",
+        prenom: "de'indja",
+        age: 22,
+        "my profession": "Software Developer",
+      };
+
+      //NOTE: delete a proprety
+      delete user.prenom;
+
+      //NOTE: existence of a property
+      console.log("age" in user);
+
+      //NOTE: loop for
+      let users = {
+        name: "John",
+        age: 30,
+        isAdmin: true,
+      };
+      
+      for (let key in users) {
+        // keys
+        console.log(key); // name, age, isAdmin
+        // values for the keys
+        console.log(users[key]); // John, 30, true
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
