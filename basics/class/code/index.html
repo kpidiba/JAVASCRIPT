@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   NOTE: class rectangle
+      class Rectangle {
+        constructor(long, larg) {
+          this._long = long;
+          this._larg = larg;
+        }
+
+        get long() {
+          return this._long;
+        }
+
+        get permiter() {
+          return (this._long + this._larg)*2;
+        }
+
+        get isValid() {
+          if (this._long >= 0 && this._larg >= 0) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+
+        isBiggerThan(val) {
+          return this.permiter > val.permiter;
+        }
+      }
+
+      //   NOTE: class Carre
+      class Square extends Rectangle {
+        constructor(long) {
+          super(long, long);
+        }
+      }
+
+      //NOTE:test
+      const r = new Rectangle(10,30);
+      const s = new Square(10);
+
+      console.log(r.permiter);
+      console.log(r.isValid);
+      console.log(s.isBiggerThan(r));
+    </script>
+  </head>
+  <body></body>
+</html>

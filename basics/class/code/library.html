@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // NOTE: class Book
+      class Book {
+        //NOTE: private property
+        #page = 1;
+        constructor(title, pages) {
+          this._title = title;
+          this._pages = pages;
+          this._page = 1;
+        }
+
+        nextPage() {
+          if (this._page === this._pages) {
+            this._page = 1;
+          } else {
+            this._page++;
+          }
+        }
+        closePage() {
+          this._page = 1;
+        }
+
+        get page() {
+          return this._page;
+        }
+
+        set page(value) {
+          this._page = value;
+        }
+      }
+      // NOTE: class library
+      class Library {
+        #books = [];
+
+        addBook(book) {
+          this.#books.push(book);
+        }
+
+        addBooks(books) {
+          books.forEach(this.addBook, this);
+        }
+
+        findBooksByLetter(letter) {
+          return this.#books.filter(
+            (book) => book.title[0].toLowerCase() === letter.toLowerCase()
+          );
+        }
+      }
+      //NOTE: test
+      Isac = new Book("Isaac", 2);
+      Isac.nextPage();
+      Isac.nextPage();
+      console.log(Isac.page);
+      books = ['zeus','animal','god'];
+      books.forEach(element => {
+         console.log(element);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

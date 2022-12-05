@@ -83,3 +83,69 @@ function checkAge(age) {
 ```
 
 Notez que les parenthèses autour de `age > 18` ne sont pas obligatoires ici. Elles existent pour une meilleure lisibilité.
+
+
+
+### USUAL FUNCTIONS
+
+- **Array.prototype.at** : parcourir le tableau dans le sens inverse
+
+- **Array.prototype.concat:** concatener les tableaux
+
+- **Array.prototype.filter:** filtrer les resultats,avec des criteres
+
+```javascript
+const notes = [12,15,13,17,10];
+const goodNotes = notes.filter((note) => note =>10);
+```
+
+- **Array.prototype.find** : retourne le premier element qui correspond a la condition
+
+```javascript
+const notes = [1,23,14];
+const find= notes.find(element => element <3)
+```
+
+- **Array.prototype.flat** : applatir un tableau.
+
+- **Array.prototype.forEach**
+
+- **Array.from** : creer un tableau avec differentes choses
+
+- **Arrary.prototype.includes** : verify si un tableau contient une certaine valeur
+
+- **Array.prototye.indexOf** : return l' index d' une valeur  si elle le trouve
+
+- **Arrary.prototype.join** : joindre les elements d' un tableau
+
+- **Arrary.map** : modifier un tableau en lui appliquant un methode
+
+```javascript
+const array = [1,2,3,4];
+const map1 = array.map(x => x*4);
+console.log(map1);// Array(4,8,12,16)
+```
+
+- **Array.prototype.pop** : enlever un element
+
+- **Array.prototype.push** : ajouter un element
+
+- **Array.prototype.reduce**
+
+```javascript
+//calcul de la somme
+ const notes = [1,2,3,4,5];
+notes.reduce((acc,note) => {
+    return acc+note;
+},0);
+```
+
+- **Array.prototype.reverse** : inverse un tableau
+
+- **Array.prototype.shift** : retire le premier element et modifie le tableau
+
+- **Array.prototype.slice** : recupere les elements a partir d' un index
+
+- **Object.keys** : get table of keys of an objects
+
+- **Object.values** : get table of values of an objects

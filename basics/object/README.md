@@ -12,6 +12,8 @@ An object can be created with figure brackets `{…}` with an optional list of *
 
 - [`Object.values()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values) creates an array containing the values of an object.
 
+- **Object.getPrototypeOf**
+
 - **property name :** start with underscore.
 
 ### Object references and copying
@@ -272,8 +274,6 @@ let user = {
 
 user.sayHi(); // Ilya
 ```
-
- 
 
 ### Garbage collection
 

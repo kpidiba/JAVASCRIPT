@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+
+      function moyenne(notes){
+        let sum =0;
+        for(let note of notes){
+            sum = sum +note;
+        }
+        return sum/notes.length;
+      }
+      //NOTE: Student
+      class Student {
+       static ecole = "Formatec"; //NOTES: equals Student.ecole="Formatec"
+       static  hello(){
+        return ["json" = "json"];
+       }
+        constructor (firstname,lastname){
+            this._firstname = firstname;
+            this._lastname = lastname;
+        }
+        set notes(notes){
+            this._notes =notes;
+        }
+        get notes(){
+          return this._notes;
+        }
+        canPass(){
+          return moyenne(this._notes) >= 10;
+        }
+      }
+
+      // Heritage
+      class SuperStudent extends Student{
+          get name(){
+            return "Super" +super.name;
+          }
+          set name(value){
+            return true;
+          }
+      }
+
+      // NOTES:test
+      const  dav = new Student("KPIDIBA","David");
+      const joe = new SuperStudent("DEUSX",'machina');
+      dav.notes = [10,20];
+      console.log(dav.notes);
+      console.log(Student.session);
+      
+
+    </script>
+  </head>
+  <body></body>
+</html>

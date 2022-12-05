@@ -24,6 +24,8 @@ A variable is a label that references a value like a number or string. Before us
 
 - **let** is a modern declaration
 
+- **Array.isArray()** : verify array.
+
 -  **var** is an old-school variable declaration. Normally we don’t use it at all, but we’ll cover subtle differences from `let`(big scope)
 
 - **const** : the value of the variable can’t be changed.
