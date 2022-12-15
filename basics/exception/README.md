@@ -18,8 +18,6 @@ try {
 }
 ```
 
-
-
 ## THROW OPERATOR
 
 The `throw` operator generates an error.
@@ -32,8 +30,6 @@ Technically, we can use anything as an error object. That may be even a primitiv
 
 JavaScript has many built-in constructors for standard errors: `Error`, `SyntaxError`, `ReferenceError`, `TypeError` and others. We can use them to create error objects as well.
 
-
-
 - **Error Object**
 
 ```javascript
@@ -44,4 +40,4 @@ let error = new ReferenceError(message);
 // ...
 ```
 
-kskd
+

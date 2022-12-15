@@ -84,8 +84,6 @@ function checkAge(age) {
 
 Notez que les parenthèses autour de `age > 18` ne sont pas obligatoires ici. Elles existent pour une meilleure lisibilité.
 
-
-
 ### USUAL FUNCTIONS
 
 - **Array.prototype.at** : parcourir le tableau dans le sens inverse

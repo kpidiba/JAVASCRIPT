@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    const a = new AbortController()
+    Promise.race([
+      fetch("https://jsonplaceholder.typicode.com/posts/?_limit=5&_delay=2000",{
+        signal: a.signal
+      }),
+      fetch("https://jsonplaceholder.typicode.com/users/?_limit=3",{
+        signal: a.signal
+      }),
+    ])
+      .then((race) => race.json())
+      .then(resp =>{
+        a.abort();
+        console.log
+      });
+  </script>
+  <body></body>
+</html>

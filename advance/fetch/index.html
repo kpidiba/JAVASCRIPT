@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // NOTE:EXEMPLE ONE
+      //   fetch("https://jsonplaceholder.typicode.com/users")
+      //     .then((b) => b.text())
+      //     .then((ex) => console.log(ex));
+
+      // NOTE: EXEMPLE 2
+      async function fetchUsers() {
+        const r = await fetch("https://jsonplaceholder.typicode.com/posts", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ title: "David", age: 23 }),
+        });
+        //get headers value
+        console.log(r.headers.get("Content-Type"));
+        if (r.ok === true) {
+          return r.json();
+        }
+        throw new Error("ERROR");
+      }
+
+      fetchUsers().then((a) => console.log(a));
+    </script>
+  </head>
+  <body></body>
+</html>

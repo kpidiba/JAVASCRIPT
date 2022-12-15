@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // NOTE: example
+      const p = new Promise((reslove, reject) => {
+        reslove(4);
+        // reject(3);
+      });
+
+      p.then((n) => {
+        console.log("ressite :" + n);
+        return 2;
+      })
+        .then((a) => {
+          console.log("value: " + a);
+        })
+        .catch((n) => {
+          console.log("echec :" + n);
+        });
+
+      //   NOTE: pratique
+      function wait(duration) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(duration);
+          }, duration);
+        });
+      }
+
+      function waitAndFail(duration) {
+        return Promise((reslove, reject) => {
+          setTimeout(() => {
+            reject(duration);
+          }, duration);
+        });
+      }
+
+      wait(3000)
+        .then(() => {
+          console.log("Attendre 3s");
+          return wait(2000);
+        })
+        .then(() => {
+          console.log("wait 2s");
+        });
+    </script>
+  </head>
+  <body></body>
+</html>

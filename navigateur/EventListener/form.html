@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="form.js" defer></script>
+    <style>
+        .spoiler{
+            background: #000;
+            color:#000;
+            cursor:pointer;
+        }
+        .spoiler::selection{
+            color: rgba(0,0,0,0);
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="name" id="">
+        <input type="checkbox">
+        <button>Envoyer</button>
+        <select multiple name="dad" id="">
+            <option value="1">optiion 1</option>
+            <option value="2">optiion 2</option>
+            <option value="3">optiion 3</option>
+        </select>
+    </form>
+
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione autem mollitia voluptatum totam quam ad quidem sit consequatur expedita reiciendis, ipsa repellat maiores vero quo optio quisquam praesentium harum dolor.
+        Praesentium <span class="spoiler">beatae vel sequi ipsam dolores, provident unde consequatur</span> tempora quidem eveniet consectetur sint adipisci. Reprehenderit ex id quis earum aut optio, eaque laborum eum qui. Non odio nam vel.
+        Odit quis doloribus eius quidem, nihil fugit. Eius,<span class="spoiler"> quod adipisci nulla doloremque</span> nobis rem omnis officia labore a explicabo atque placeat deleniti assumenda vel nihil maxime expedita, vero quam laboriosam!
+    </p>
+</body>
+</html>

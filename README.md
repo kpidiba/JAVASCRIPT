@@ -32,4 +32,17 @@ JavaScript is a scripting language primarily used in interactive web pages and a
 8. [**Object**]()
 9. [**Classes**]()
 10. [**...**]()
-11. 
+
+### IV - ADVANCED
+
+1. [**FETCH**]()
+
+2. [**MODULES**]()
+
+3. [**PROMISE**]()
+
+4. [**SUCRE SYNTAXIQUE**]()
+
+5. [**TIMERS**]()
+
+6. [**JSDOC**]()
