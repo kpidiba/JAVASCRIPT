@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://unpkg.com/vue@3.0.2"></script> -->
+    <!-- Get access to vue object -->
+    <script src="vue.global.js"></script>
+    <style>
+      body{
+        background: #eee;
+        max-width: 960px;
+        margin:20px auto;
+      }
+      .box {
+        padding: 100px 0;
+        width: 400px;
+        text-align: center;
+        background: #ddd;
+        margin: 20px;
+        display: inline-block;
+      }
+      p,h3,ul{
+          margin:0;
+          padding:0;
+      }
+      li{
+        list-style-type: none;
+        background: #fff;
+        margin: 20px auto;
+        padding:10px 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      li.fav{
+        background: #ff9ed2;
+        color:white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello,vue :)</h1>
+
+    <!-- on va controller cette partie avec vue -->
+    <div class="" id="app">
+      {{ title }} - {{ description }} - {{ salary }}
+      <!-- click event -->
+      <br />
+      <!-- Modify variable from here-->
+      <button v-on:click="salary*=2">Increase salary</button>
+
+      <!-- Modify variable from the app.js -->
+      <button @click="changeSalary">change salary</button>
+      <button @click="changeTitle('new Title')">change Title</button>
+      <div v-if="bool">Hello World</div>
+      <button @click="showMessage">
+        <span>{{ hide }}</span>
+      </button>
+
+
+      <!-- mouse events -->
+      <!-- NOTE: event is past as first parameter by default -->
+      <div class="box" @mouseover="handleEvent">mouse over</div>
+      <div class="box" @mouseleave="handleEvent">mouse leave</div>
+      <!-- NOTE: past event as parameter -->
+      <div class="box" @dblclick="handleEvent($event,34)">double click</div>
+      <div class="box" @mousemove="handleMouseMove">
+        La souris se deplace en {{ x }} et {{ y }}
+      </div>
+
+      <!-- Outputing Lists -->
+      <div>
+        <ul>
+          <!-- <li v-for="item in books" :class="{ fav: item.isFav}" @click="toggleColor(item)">
+            {{ item.title }}
+          </li> -->
+
+          //NOTE: add class fav if true
+          <li v-for="item in filteredBooks" :class="{ fav: item.isFav}" @click="toggleColor(item)">
+            {{ item.title }}
+          </li>
+        </ul>
+      </div>
+
+      <!-- Attributes Binding -->
+      <a v-bind:href="url">google</a>
+
+      <!-- Computed proprieties , depends of data if data change it also change -->
+
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
