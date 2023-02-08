@@ -1,0 +1,12 @@
+<h1 [style.backgroundColor]=" boolColor ?'red': 'green' ">Angular Root Tag</h1>
+<app-navbar></app-navbar>
+<app-post [parent_value]='parent_value' (message_event)="receiveMessage($event)" ></app-post>
+<h3>child var: {{ message_child }}</h3>
+<h4  [class.text-red] = "boolColor" >fromchild :{{ fromChildValue }}</h4>
+<img [src]="imageUrl" alt="property binding">
+<br>
+<input (keyup)="onKeyUp(username)" #username >
+<br>
+<input type="text" [(ngModel)] = "twoWayBinding">
+
+<h3>twoWayBinding:{{ twoWayBinding }}</h3>
