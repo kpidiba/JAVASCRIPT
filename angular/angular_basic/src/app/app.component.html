@@ -1,12 +1,66 @@
-<h1 [style.backgroundColor]=" boolColor ?'red': 'green' ">Angular Root Tag</h1>
-<app-navbar></app-navbar>
-<app-post [parent_value]='parent_value' (message_event)="receiveMessage($event)" ></app-post>
-<h3>child var: {{ message_child }}</h3>
-<h4  [class.text-red] = "boolColor" >fromchild :{{ fromChildValue }}</h4>
-<img [src]="imageUrl" alt="property binding">
-<br>
-<input (keyup)="onKeyUp(username)" #username >
-<br>
-<input type="text" [(ngModel)] = "twoWayBinding">
+<!-- <h1 [style.backgroundColor]="boolColor ? 'red' : 'green'">Angular Root Tag</h1> -->
+<!-- <app-navbar></app-navbar> -->
+<!-- <app-post
+  [parent_value]="parent_value"
+  (message_event)="receiveMessage($event)"
+></app-post> -->
+<!-- <h3>child var: {{ message_child }}</h3>
+<h4 [class.text-red]="boolColor">fromchild :{{ fromChildValue }}</h4>
+<img [src]="imageUrl" alt="property binding" />
+<br />
+<input (keyup)="onKeyUp(username)" #username />
+<br />
+<input type="text" [(ngModel)]="twoWayBinding" />
+<br />
+<button (click)="addNew()">add new</button>
 
 <h3>twoWayBinding:{{ twoWayBinding }}</h3>
+<div *ngIf="listPost.length > 0; ngIfElse: emptyList">
+  <ul>
+    <h3>List pOst</h3>
+    <li *ngFor="let post of listPost">{{ post }}</li>
+  </ul>
+</div>
+
+<ng-template #emptyList>
+  <p>there is no data in list post</p>
+</ng-template>
+
+<h3>List Object</h3>
+<div *ngIf="listObject.length > 0; else emptyList">
+  <ul>
+    <li *ngFor="let obj of listObject; let i = index">
+      index:{{ i }} name:{{ obj.name }}
+      <button (click)="onDelete(obj, i)">delete</button>
+    </li>
+  </ul>
+</div>
+
+<button (click)="sendStep('step 1')">Step 1</button>
+<button (click)="sendStep('step 2')">Step 2</button>
+<button (click)="sendStep('step 3')">Step 3</button>
+
+<div [ngSwitch]="stepForm">
+  <div *ngSwitchCase="'step 1'">Step 1 Form</div>
+  <div *ngSwitchCase="'step 2'">Step 2 Form</div>
+  <div *ngSwitchCase="'step 3'">Step 3 Form</div>
+  <div *ngSwitchDefault>Something Else Default</div>
+</div>
+
+<h3 [ngStyle]="{
+  color:boolColor? 'blue':'orange',
+  textTransform:boolColor?'uppercase':'lowercase'
+}">style changing</h3>
+
+{{ pipv | uppercase }}
+{{ count | number }}<br>
+{{ dcount | number:'2.3-4' }}
+{{ count | currency:'JPY' }}
+{{ count | currency:'EUR' }} <br>
+{{ "date:"+today | date }}
+{{ davidO | json }} 
+{{ 0.2345| percent }}<br>
+{{ listPost | slice : 0:2 }}
+{{ listPost | slice : 3:5 }} -->
+
+<app-form></app-form>

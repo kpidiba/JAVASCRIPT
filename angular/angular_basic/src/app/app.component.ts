@@ -1,4 +1,6 @@
 import { AfterViewInit, ChangeDetectorRef, Component ,OnInit,ViewChild} from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { FormComponent } from './form/form.component';
 import { PostComponent } from './post/post.component';
 
 @Component({
@@ -13,19 +15,44 @@ export class AppComponent implements AfterViewInit   {
   //property binding
   imageUrl:string = "https://images.ctfassets.net/hrltx12pl8hq/3j5RylRv1ZdswxcBaMi0y7/b84fa97296bd2350db6ea194c0dce7db/Music_Icon.jpg";
   //class binding
-  boolColor :boolean=true;
+  boolColor :boolean=false;
   twoWayBinding:string ="";
-  
+  listPost :Array<string>  = ["dva","dkdk","hello","world","I am the user","chadding"];
+  listObject: Array<any> = [{id:1,name:"yollow"},{id:2,name:"bollow"},{id:3,name:"hollow"}];
+  @ViewChild(PostComponent) childCompo: any;
+  stepForm:string="";
+  pipv:string = "pipe value";
+  count :number = 12345;
+  dcount:number = 4.3;
+  today:Date = new Date();
+  davidO:object ={
+    id:1,
+    name:"David"
+  }
+
 
   onKeyUp(value:HTMLInputElement){
     // console.log($event.key);
     // console.log($event.keyCode);
-    console.log("value: "+value.value);
+    // console.log("value: "+value.value);
   }
 
-  @ViewChild(PostComponent) childCompo: any;
+
+
   receiveMessage($event:string){
     this.fromChildValue =$event;
+  }
+
+  sendStep(value:string){
+    this.stepForm = value;
+  }
+
+  addNew(){
+    this.listObject.push({id:6,name:"hello"});
+  }
+
+  onDelete(obj:any,i:number){
+    this.listObject.splice(i,1);
   }
 
 
@@ -38,3 +65,4 @@ export class AppComponent implements AfterViewInit   {
     this.cd.detectChanges();
   }
 }
+

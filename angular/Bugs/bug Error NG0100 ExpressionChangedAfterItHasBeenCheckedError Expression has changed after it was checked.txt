@@ -1,0 +1,6 @@
+// add this to constructor
+constructor(private cd :ChangeDetectorRef){
+  }
+
+//ngAfterViewInit last line
+this.cd.detectChanges();

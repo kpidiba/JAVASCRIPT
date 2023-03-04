@@ -24,6 +24,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 - **<route-view/>** where route component will be inject
 
-- <route-linK> permet d' intercepter les requetes
+- <route-link> permet d' intercepter les requetes
 
 ### ROUTE PARAMETER

@@ -1,28 +1,4 @@
-# dojo-blog
-
-## Project setup
-
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-### COMPOSITION API
+# COMPOSITION API
 
 Composition API is a set of APIs that allows us to author Vue components using imported functions instead of declaring options. It is an umbrella term that covers the following APIs:
 
@@ -33,6 +9,10 @@ Composition API is a set of APIs that allows us to author Vue components using i
 - [Dependency Injection](https://vuejs.org/api/composition-api-dependency-injection.html), i.e. `provide()` and `inject()`, that allow us to leverage Vue's dependency injection system while using Reactivity APIs.
 
 The Composition API is an addition to the Vue framework created to address the limitations of the Options API used in Vue 2. The Composition API provides a way to manage reactivity in an application without compromising code organization and readability. As an alternative to the Options API offers more benefits. With the Composition API, you can restructure data, method, computed, and watch, in a clearer structure.
+
+- Group logic together in a setup function
+
+- Easily create reusable logic
 
 ```java
 <script setup>

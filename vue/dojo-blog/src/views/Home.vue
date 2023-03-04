@@ -14,8 +14,7 @@
         name:  'Home',
         //NOTE: varibale here is not reactive
         setup(){
-            console.log(this);
-
+            console.log(this);         
             const p = ref(null)
 
             let name = "mario"
@@ -25,7 +24,6 @@
                 console.log(p,p.value,p.value.classList.add('test'),
                 p.value.textContent= 'hello,ninjas');
             }
-
             return {name:name,age:age ,handleClick,p}
         }
         //NOTE: reactive data(){return {}}
