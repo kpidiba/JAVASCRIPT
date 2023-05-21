@@ -1,0 +1,7 @@
+
+<button (click)="addNew()">New button</button>
+<ul>
+    <li *ngFor="let post of postlist">
+        {{ post | json}}
+    </li>
+</ul>
