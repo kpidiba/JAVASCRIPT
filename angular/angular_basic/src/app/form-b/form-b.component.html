@@ -1,7 +1,7 @@
 <!-- NOTE:REACTIVE FORM -->
 <div class="container mt-5">
     <div class="form-area">
-        <form [formGroup]="form">
+        <form >
             <div class="form-group">
                 <label> Username</label>
                 <input type="text" class="form-control" formControlName="username" [ngClass]="{ 'is-invalid': fc.username.touched && fc.username.invalid }" />

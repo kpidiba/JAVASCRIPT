@@ -4,6 +4,20 @@
 
 **Angular** (communément appelé « **Angular 2+ »** ou « **Angular v2 et plus »**)[2](https://fr.wikipedia.org/wiki/Angular#cite_note-2),[3](https://fr.wikipedia.org/wiki/Angular#cite_note-3) est un *[framework](https://fr.wikipedia.org/wiki/Framework "Framework")* pour clients, [open source](https://fr.wikipedia.org/wiki/Open_source "Open source"), basé sur [TypeScript](https://fr.wikipedia.org/wiki/TypeScript "TypeScript") et codirigé par l'équipe du projet « Angular » chez [Google](https://fr.wikipedia.org/wiki/Google "Google") ainsi que par une communauté de particuliers et de sociétés. Angular est une réécriture complète d'[AngularJS](https://fr.wikipedia.org/wiki/AngularJS "AngularJS"), [cadriciel](https://fr.wikipedia.org/wiki/Cadriciel "Cadriciel") construit par la même équipe. Il permet la création d’applications Web et plus particulièrement d'[applications Web monopages](https://fr.wikipedia.org/wiki/Application_web_monopage "Application web monopage") : des applications Web accessibles via une page Web unique qui permet de fluidifier l’expérience utilisateur et d’éviter les chargements de pages à chaque nouvelle action. Le *framework* est basé sur une architecture du type [MVC](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur "Modèle-vue-contrôleur") et permet donc de séparer les données, le visuel et les actions pour une meilleure gestion des responsabilités. Un type d’architecture qui a largement fait ses preuves et qui permet une forte maintenabilité et une amélioration du travail collaboratif.
 
+### RESSOURCES
+
+1. **YOUTUBE**
+   
+   - [Nihira Techiees - YouTube](https://www.youtube.com/@NihiraTechiees)
+   - [Academind - YouTube](https://www.youtube.com/@academind) 
+   - [Sahosoft Solutions](https://www.youtube.com/@sahosoftsolutions2343) 
+
+2. **WEBSITE**
+   
+   - [Angular](https://angular.io/guide)
+   - [8 Top-Class Free Angular Templates 2023 - AdminLTE.IO](https://adminlte.io/blog/free-angular-templates/) 
+   - https://themeselection.com/angular-material-admin-template-free/ 
+
 ### CREATE PROJECT
 
 ```js
@@ -16,9 +30,29 @@ npm install
 
 ### CONCEPTS
 
-- components
-
-- data bindings
+- Angular is a popular JavaScript framework for building web applications. It provides a comprehensive set of features and concepts that enable developers to build robust, scalable, and maintainable applications. Here are some key concepts in Angular:
+  
+  1. File Architectures , setup
+  
+  2. Components: Components are the building blocks of an Angular application. They encapsulate the UI and behavior of a part of the application. Each component has its template, styles, and logic. Components are organized in a component tree hierarchy.
+  
+  3. Templates: Templates define the structure and layout of the component's view. They use HTML combined with Angular-specific template syntax, such as data binding, directives, and event binding, to render dynamic content.
+  
+  4. Directives: Directives are markers on DOM elements that allow you to extend HTML with custom behaviors and manipulate the DOM. Angular provides built-in directives like `ngIf`, `ngFor`, and `ngStyle`, and you can also create your own custom directives.
+  
+  5. Data Binding: Data binding enables the synchronization of data between the component and its template. Angular supports different types of data binding, including interpolation (`{{ }}`), property binding (`[ ]`), event binding (`( )`), and two-way binding (`[( )]`).
+  
+  6. Services: Services are reusable components that provide specific functionality and can be shared across multiple components. They are responsible for handling data, performing HTTP requests, and implementing business logic. Services are typically injected into components using dependency injection.
+  
+  7. Dependency Injection: Dependency injection is a design pattern used in Angular to manage the dependencies between different components and services. Angular's dependency injection system allows you to declare dependencies in the constructor of a component or service and have them automatically resolved and provided by the framework.
+  
+  8. Routing: Angular's router enables navigation between different views/components based on the application's URL. It allows you to define routes, associate them with components, and handle navigation events.
+  
+  9. Modules: Modules are used to organize and encapsulate related components, services, and other Angular features. They help to keep the application modular, improve code organization, and enable lazy loading of parts of the application.
+  
+  10. Forms: Angular provides powerful form handling capabilities, including template-driven forms and reactive forms. Form controls, validators, and form submission handling are some of the features offered by Angular's forms module.
+  
+  11. Observables: Observables are a fundamental part of Angular's reactive programming approach. They represent streams of data over time and are used extensively for handling asynchronous operations, such as HTTP requests and event handling.
 
 ### FRAMEWORK
 
@@ -26,9 +60,88 @@ npm install
 
 - You can extend framework
 
+### ANGULAR SPRING BOOT
+
+1. RESTful API: Spring Boot provides robust support for building RESTful APIs. With Angular, you can consume these APIs to fetch and manipulate data from the server. Understanding how to define and consume RESTful APIs in Spring Boot is crucial for seamless integration with Angular.
+
+2. CORS (Cross-Origin Resource Sharing): Since Angular typically runs on a different domain/port than the Spring Boot backend, you need to configure CORS to allow requests from the Angular frontend to access the Spring Boot API. CORS defines how the browser enforces security by restricting cross-origin requests. You can configure CORS in Spring Boot to specify which origins, HTTP methods, and headers are allowed.
+
+3. Security: Authentication and authorization are important aspects of most web applications. Spring Security is a powerful security framework that integrates well with Spring Boot. You can leverage Spring Security to secure your backend APIs and handle authentication and authorization in your Angular application.
+
+4. DTO (Data Transfer Object): It is common to use Data Transfer Objects to transfer data between the Angular frontend and the Spring Boot backend. DTOs help in defining a specific structure for data transmission and decoupling the frontend and backend models.
+
+5. Interceptors: Angular interceptors allow you to intercept HTTP requests and responses. You can use interceptors to add headers, handle authentication tokens, or perform other custom logic. In the case of Angular and Spring Boot integration, you can use an interceptor to attach an authentication token to each request made from Angular to the Spring Boot API.
+
+6. JWT (JSON Web Tokens): JSON Web Tokens are a popular approach for handling authentication and authorization in modern web applications. You can use JWTs in combination with Spring Security to authenticate users in your Spring Boot backend and pass JWT tokens to Angular for subsequent API requests.
+
+7. Deployment: Angular and Spring Boot applications can be deployed separately or together. You may need to configure your server to serve both the Angular frontend and Spring Boot backend. Understanding the deployment process and configuring the server to correctly handle both Angular and Spring Boot can help ensure a smooth deployment experience.
+
+### SETUPS
+
+- install node js
+
+- npm install -g @angular/cli
+
+- ng new Welcome
+
+### FILE ARCHITECTURE
+
+The application project files are placed in the in the src/ folder of
+ the workspace. The src/ folder contains the source files for the root 
+application. Let’s now look at the content of the src/ folder
+
+**app/** – this folder contains the where the application logic and data are defined. Discussed below
+
+**assets/** – this folder contains assets including images used by the application
+
+**environment/** – contains build configuration settings for a particular target environment. There is a default standard production environment
+
+**index.html** – this is the index page of the web application. The script and css files are added automatically.
+
+**main.ts** – this is the main entry point of the 
+application. It compiles the application with the Just-In-Time(JIT) 
+compiler and bootstraps the root module(AppModule) to run in a browser.
+
+**styles css** – This files contains the css styles and stylesheets that  are used by the project.
+
+#### **3. Content of the app/ Folder**
+
+The key project files you’ll be working with in located in the app/ 
+directory inside the src/ folder. The file files inside include the 
+following:
+
+**app.component.css** – this is the css style for the root AppComponent. The styles here applies to the app.component.html file
+
+**app.component.html** – this is the html template associated with the root component (AppComponent0
+
+**app.component.specs.ts** – Use for unit testing of the root component
+
+**app.component.ts** – This a TypeScript file that 
+defines the core logic of the AppComponent. The view associated with the
+ AppComponent is what becomes the root of the view hierarchy as you add 
+components and services  to your application.
+
+**app.module.ts** – this file defines the root module of
+ the application. The root module is called AppModule. This tell Angular
+ how to organise your application. Any new components you will be adding
+ to your application must be defined in the app.module.ts file.
+
+**app.routing.module.ts** – this file contains the definitions for the navigation between components in Angular application
+
 ### COMMANDS
 
+- Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 - change port: ng serve --port 3000
+
+### ENVIRONMENTS
+
+-  https://www.itsolutionstuff.com/post/how-to-use-environment-variable-in-angularexample.html 
+
+- ```bash
+  ng generate environments
+  ```
+
+- 
 
 ### LIBRARY
 
@@ -45,6 +158,15 @@ npm install
 - Generalement on cree plusieurs pages pour chaque vue
 
 - Ressource are on client browser 
+
+### MODULES
+
+in Angular, a module is **a
+ mechanism to group components, directives, pipes and services that are 
+related, in such a way that can be combined with other modules to create
+ an application**. An Angular application can be thought of as a 
+puzzle where each piece (or each module) is needed to be able to see the
+ full picture.
 
 # components
 
@@ -156,9 +278,8 @@ create variable in component.ts and use **{{  }}** to show the value in html or 
 @Input() parent_value:string;
   constructor() {
     this.parent_value ="";
-
 }
-//in parent declare value 
+//in parent declare value
 //using it in html
 <child_name [parent_value]='parent_value' ></child_name>
 ```
@@ -166,7 +287,7 @@ create variable in component.ts and use **{{  }}** to show the value in html or 
 - Child to Parent Component via @ViewChild Decorator
 
 ```js
-class IMPlements AfterViewInit
+class IMPlements AfterViewInit{
 //import child_name.component.ts and add to viewchild
 @ViewChild(PostComponent) childCompo: any;
 //init value with this
@@ -240,8 +361,6 @@ boolColor:bool = true;
 <input (keyup)="onKeyUp(username)" #username >
 //in ts
 onKeyUp(value:HTMLInputElement){
-    // console.log($event.key);
-    // console.log($event.keyCode);
     console.log("value: "+value.value);
   }
 ```
@@ -282,9 +401,7 @@ component ----unidirectionel ---> view (html)
   
   - change appearance or the behavior of a DOM Element
   
-  - **NgClass ,NgStyle**
-
-### 
+  - **NgClass ,NgStyle** 
 
 ### ANGULAR PIPES
 
@@ -332,6 +449,23 @@ export class SummaryPipe implements PipeTransfrom{
 }
 ```
 
+### ngOnInit vs ngAfterViewInit
+
+1. `ngOnInit`:
+   
+   - The `ngOnInit` lifecycle hook is called once when the component is initialized after its constructor. It is commonly used to perform component initialization tasks.
+   - This hook is useful for initializing component properties, making API calls to fetch initial data, subscribing to observables, and setting up the component's initial state.
+   - At the time `ngOnInit` is called, the component's inputs and properties are available, but the view (DOM) may not have been rendered yet.
+
+2. `ngAfterViewInit`:
+   
+   - The `ngAfterViewInit` lifecycle hook is called after the component's view (DOM) has been fully initialized and rendered.
+   - This hook is useful when you need to access and manipulate the DOM elements or perform any tasks that require the view to be fully rendered.
+   - It is commonly used for interacting with child components, manipulating the view's rendered elements, setting up third-party libraries that require access to the DOM, or initializing plugins.
+   - It is important to note that `ngAfterViewInit` is not called for components that are not part of the current view hierarchy (e.g., components within *ngIf or *ngFor blocks that are not currently rendered).
+
+In summary, `ngOnInit` is called once during component initialization and is typically used for component initialization tasks, while `ngAfterViewInit` is called after the component's view is fully rendered and is often used for manipulating the DOM or interacting with child components.
+
 ### ANGULAR SERVICES
 
 we use angular services to share data among components whether there is relationship between components or not ....
@@ -344,6 +478,12 @@ we use angular services to share data among components whether there is relation
 export class PostService{
     postList : Array<any> = [{}];
 }
+
+
+
+constructor(private postService:PostService) {
+    this.pots = postService.postList;
+  }
 ```
 
 - create service with angular cli
@@ -352,9 +492,23 @@ export class PostService{
 ng g s services/service_name
 ```
 
+### GUARDS COMMAND
+
+Angular route guards are interfaces provided by Angular which, when implemented, **allow us to control the accessibility of a route based on conditions provided in class implementation of that interface**. Here are some types of Angular guards: CanActivate, CanActivateChild, CanLoad, CanDeactivate and Resolve.
+
+```bash
+ng g guard services/auth-service/auth
+```
+
 ### DEPENDENCY INJECTION
 
-- **make service injectable to any component** 
+- first method: **define service class as provider in app.module.ts ,or in direct component ts file**
+
+```ts
+providers: [PostService],
+```
+
+- second method: **make service injectable to any component** 
 
 ```js
 //in service class
@@ -363,8 +517,156 @@ ng g s services/service_name
 })
 ```
 
+- generate manually service
+
+```bash
+ng g s services/test
+```
+
+- generate manually interface
+
+```bash
+ng g i models/user
+```
+
 ### ANGULAR DRIVEN FORM
 
 - two form types (reactive form and template driven form z)
 
+- go to form and form-b component to seed codes
+
 - **all are in form component** 
+
+- **FormControll errors**
+
+```ts
+class FormControll{
+    value();
+    touched();
+    untouched();    
+    dirty();
+    pristine();
+    valid();
+    errors();
+}
+```
+
+- REACTIVE FORM
+  
+  - import in app.module.ts
+
+```ts
+ReactiveFormsModule    
+```
+
+```js
+this.myForm.controls['firstName'].valueChanges.subscribe(value => {
+  console.log(value);
+});
+```
+
+### CUSTOM VALIDATIONS
+
+- create validators folders
+
+- name example : nospace.validators.ts
+
+```ts
+import { AbstractControl, ValidationErrors } from "@angular/forms";
+
+class noSpace {
+    noSpaceValidations(control:AbstractControl):ValidationErrors|null{
+        let controlValue = control.value as string;
+        if(controlValue.indexOf(' ') >= 0){
+            return {noSpaceValidations:true};
+        }else{
+            return null;
+        }
+    }
+}
+```
+
+# ROUTING
+
+Navigate throw components
+
+- **First method**: declare in app.module.ts
+
+```ts
+RouterModule.forRoot([
+      {path:'post',component:PostComponent},
+       {path:'postlist',component:PostListComponent}
+      {path:'**',component:NoMatchComponent}
+    ]),
+```
+
+- Router-Outlet is **an
+   Angular directive from the router library that is used to insert the 
+  component matched by routes to be displayed on the screen** 
+
+- routeLink (for redirect): don't loading the page
+
+```ts
+<button style="margin: 10px;" routerLink="postlist" routerLinkActive="active">Post list</button>
+<button [routerLink] = "['/post',index]">View content</button>
+```
+
+- Navigation in ts file programmaticaly
+
+```ts
+this.router.navigate('/posts');
+```
+
+- multi parameter
+
+```ts
+<button [routerLink]="['/single',1,'man']">Cliquer</button>
+```
+
+- **second method: common, put route on a modules file and put routes in the file**
+
+```ts
+ng g module app-routing --module name_of_module --flat
+```
+
+### RXJS
+
+- RXJS  is a library for composing asynchronous and event-based programs by
+   using observable sequences. It provides one core type, the [Observable](https://rxjs.dev/guide/observable), satellite types (Observer, Schedulers, Subjects) and operators inspired by `Array` methods (`[map](https://rxjs.dev/api/index/function/map)`, `[filter] (https://rxjs.dev/api/index/function/filter)`, `[reduce] (https://rxjs.dev/api/index/function/reduce)`, `[every]  (https://rxjs.dev/api/index/function/every)`, etc) to allow handling asynchronous events as collections.
+
+- DOCUMENTATION: [RxJS](https://rxjs.dev/guide/overview) 
+
+- An Observable is a sequence of data that is emitted data asynchronously or synchrounsly over a time of period, It will continously observe a set of stream data & automatically update or track that sequence of data whenever there is something changed
+
+```ts
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { FormComponent } from './form/form.component';
+import { PostComponent } from './post/post.component';
+import { Observable } from 'rxjs';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+})
+export class AppComponent implements OnInit {
+  constructor() {}
+  ngOnInit(): void {
+    const obsTest = new Observable((observer) => {
+      //NOTE: can return many data
+      observer.next('Returned of observalble');
+      observer.next('Returned of observalble one');
+      observer.next('Returned of observalble two');
+      console.log('printed from observable');
+    }).subscribe((value) => console.log(value));
+    obsTest.unsubscribe();
+  }
+}
+```

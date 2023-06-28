@@ -1,8 +1,12 @@
+
+//reduce error
 export interface User {
   name: string;
   age: number;
   id: number;
   email: string;
+  //date: optionall
+  date?: Date;
 }
 let users: User = {
   name: "",
