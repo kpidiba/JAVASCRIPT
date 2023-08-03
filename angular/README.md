@@ -135,7 +135,7 @@ components and services  to your application.
 
 ### ENVIRONMENTS
 
--  https://www.itsolutionstuff.com/post/how-to-use-environment-variable-in-angularexample.html 
+- https://www.itsolutionstuff.com/post/how-to-use-environment-variable-in-angularexample.html 
 
 - ```bash
   ng generate environments
@@ -448,6 +448,23 @@ export class SummaryPipe implements PipeTransfrom{
 }
 }
 ```
+
+### DATE BINDING
+
+## List of all predefined date formats in Angular
+
+| Date Format                     | Angular datepipe code              | Result                                           |
+| ------------------------------- | ---------------------------------- | ------------------------------------------------ |
+| M/d/yy, h:mm a                  | {{todayDate \| date:'short'}}      | 6/15/19, 10:54 PM                                |
+| MMM d, y, h:mm:ss a             | {{todayDate \| date:'medium'}}     | Jun 15, 2019, 10:54:25 PM                        |
+| MMMM d, y, h:mm:ss a z          | {{todayDate \| date:'long'}}       | June 15, 2019 at 10:54:25 PM GMT+5               |
+| EEEE, MMMM d, y, h:mm:ss a zzzz | {{todayDate \| date:'full'}}       | Saturday, June 15, 2019 at 10:54:25 PM GMT+05:30 |
+| M/d/yy                          | {{todayDate \| date:'shortDate'}}  | 6/15/19                                          |
+| MMM d, y                        | {{todayDate \| date:'mediumDate'}} | Jun 15, 2019                                     |
+
+dd MMMM yyyy: 15 Mars 2003
+
+
 
 ### ngOnInit vs ngAfterViewInit
 
