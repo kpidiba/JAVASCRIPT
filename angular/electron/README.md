@@ -30,7 +30,7 @@ Electron a notamment permis de développer les éditeurs de texte libres [Atom](
 npm install electron --save-dev
 ```
 
-- Create a new file named `main.js` in the root of your Angular project. This file will be the entry point for Electron. Add the following content to `main.js`,in **{folder}** put project folder name:
+- Create a new file named `index.js` in the root of your Angular project. This file will be the entry point for Electron. Add the following content to `main.js`,in **{folder}** put project folder name:
   
   javascript
   
@@ -86,10 +86,6 @@ npm install electron --save-dev
   },
 ```
 
-
-
-
-
 ### BUGS
 
 ### 1. WARNING in budgets, maximum exceeded for initial
@@ -106,13 +102,29 @@ npm install electron --save-dev
 - **TO REPAIR IT**: 
 
 ```json
-"scripts": {
+ "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "electron": "electron main",
+    "electron": "electron index",
+    "main" : "main.js",
     "build": "ng build",
     "build-electron": "ng build --prod && npm run electron",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
-  }
+  },
+```
+
+### ELECTRON PACKAGER
+
+https://www.npmjs.com/package/electron-packager
+
+```bash
+npm install electron-packager -g
+npm install electron-packager — save-dev
+```
+
+to build exe 
+
+```bash
+electron-packager . — platform=win32
 ```

@@ -4,6 +4,50 @@
 
 **Angular** (communément appelé « **Angular 2+ »** ou « **Angular v2 et plus »**)[2](https://fr.wikipedia.org/wiki/Angular#cite_note-2),[3](https://fr.wikipedia.org/wiki/Angular#cite_note-3) est un *[framework](https://fr.wikipedia.org/wiki/Framework "Framework")* pour clients, [open source](https://fr.wikipedia.org/wiki/Open_source "Open source"), basé sur [TypeScript](https://fr.wikipedia.org/wiki/TypeScript "TypeScript") et codirigé par l'équipe du projet « Angular » chez [Google](https://fr.wikipedia.org/wiki/Google "Google") ainsi que par une communauté de particuliers et de sociétés. Angular est une réécriture complète d'[AngularJS](https://fr.wikipedia.org/wiki/AngularJS "AngularJS"), [cadriciel](https://fr.wikipedia.org/wiki/Cadriciel "Cadriciel") construit par la même équipe. Il permet la création d’applications Web et plus particulièrement d'[applications Web monopages](https://fr.wikipedia.org/wiki/Application_web_monopage "Application web monopage") : des applications Web accessibles via une page Web unique qui permet de fluidifier l’expérience utilisateur et d’éviter les chargements de pages à chaque nouvelle action. Le *framework* est basé sur une architecture du type [MVC](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur "Modèle-vue-contrôleur") et permet donc de séparer les données, le visuel et les actions pour une meilleure gestion des responsabilités. Un type d’architecture qui a largement fait ses preuves et qui permet une forte maintenabilité et une amélioration du travail collaboratif.
 
+## MIGRATION WEBSITE
+
+- https://update.angular.io/ 
+
+### DESCRIPTION
+
+Certainly, Angular is a comprehensive framework for building dynamic web applications. Here are some key concepts and features in Angular:
+
+1. **Components**: Angular applications are built using components. A component is a self-contained unit that encapsulates the view, logic, and data for a part of the user interface.
+
+2. **Templates**: Templates define the structure of how a component's view should be rendered. They use Angular's template syntax, which extends HTML with additional features like data binding and directives.
+
+3. **Directives**: Directives are instructions in the DOM that tell Angular how to render the UI. They can be structural (like `ngIf` and `ngFor`) or attribute-based (like `ngModel`).
+
+4. **Data Binding**: Angular supports various types of data binding that enable you to synchronize data between the component and the view. Types of data binding include Interpolation, Property Binding, Event Binding, and Two-way Binding.
+
+5. **Services**: Services provide a way to share data and functionality across components. They are usually used to handle data retrieval, manipulation, and communication with the backend.
+
+6. **Dependency Injection**: Angular's dependency injection system is used to provide instances of services, components, and other objects to the parts of your application that need them. This promotes modularity and reusability.
+
+7. **Modules**: Angular applications are modular, and modules are used to group related components, directives, pipes, and services together. The main application module is often referred to as the root module.
+
+8. **Routing**: Angular's router allows you to create a single-page application with multiple views. You can define routes, navigate between them, and load different components based on the URL.
+
+9. **Forms**: Angular provides two types of forms: template-driven forms and reactive forms. Forms allow you to capture user input and validate it before submitting it to the server.
+
+10. **HTTP Client**: The `HttpClient` module is used to make HTTP requests to a server. It supports features like request/response transformations, error handling, and interceptors.
+
+11. **Pipes**: Pipes are used to transform data for display in the template. Angular provides built-in pipes for formatting dates, numbers, and more. You can also create custom pipes.
+
+12. **Interceptors**: As discussed earlier, interceptors are used to intercept HTTP requests and responses to add common functionalities.
+
+13. **Lifecycle Hooks**: Components have lifecycle hooks that allow you to tap into various stages of a component's lifecycle, such as `ngOnInit`, `ngOnChanges`, and `ngOnDestroy`.
+
+14. **Modules and Lazy Loading**: Angular supports lazy loading, where you can load modules on-demand, improving initial loading time. This is particularly useful for larger applications.
+
+15. **Testing**: Angular applications can be thoroughly tested using tools like Jasmine for unit testing and Protractor for end-to-end testing.
+
+16. **Internationalization (i18n)**: Angular provides tools for internationalizing your application, allowing you to support multiple languages and locales.
+
+17. **Animations**: Angular provides a powerful animation system to create smooth transitions and effects in your application.
+
+18. **State Management**: While not a core Angular concept, many Angular applications use libraries like NgRx or Akita for managing application state in a more controlled manner
+
 ### RESSOURCES
 
 1. **YOUTUBE**
@@ -11,6 +55,7 @@
    - [Nihira Techiees - YouTube](https://www.youtube.com/@NihiraTechiees)
    - [Academind - YouTube](https://www.youtube.com/@academind) 
    - [Sahosoft Solutions](https://www.youtube.com/@sahosoftsolutions2343) 
+   -  [Monsterlessons Academy - YouTube](https://www.youtube.com/@MonsterlessonsAcademy) (top)
 
 2. **WEBSITE**
    
@@ -32,27 +77,45 @@ npm install
 
 - Angular is a popular JavaScript framework for building web applications. It provides a comprehensive set of features and concepts that enable developers to build robust, scalable, and maintainable applications. Here are some key concepts in Angular:
   
-  1. File Architectures , setup
+  1. **File Architectures , setup**
   
-  2. Components: Components are the building blocks of an Angular application. They encapsulate the UI and behavior of a part of the application. Each component has its template, styles, and logic. Components are organized in a component tree hierarchy.
+  2. **Components:** Components are the building blocks of an Angular application. They encapsulate the UI and behavior of a part of the application. Each component has its template, styles, and logic. Components are organized in a component tree hierarchy.
   
-  3. Templates: Templates define the structure and layout of the component's view. They use HTML combined with Angular-specific template syntax, such as data binding, directives, and event binding, to render dynamic content.
+  3. **Templates:** Templates define the structure and layout of the component's view. They use HTML combined with Angular-specific template syntax, such as data binding, directives, and event binding, to render dynamic content.
   
-  4. Directives: Directives are markers on DOM elements that allow you to extend HTML with custom behaviors and manipulate the DOM. Angular provides built-in directives like `ngIf`, `ngFor`, and `ngStyle`, and you can also create your own custom directives.
+  4. **Directives:** Directives are markers on DOM elements that allow you to extend HTML with custom behaviors and manipulate the DOM. Angular provides built-in directives like `ngIf`, `ngFor`, and `ngStyle`, and you can also create your own custom directives.
   
-  5. Data Binding: Data binding enables the synchronization of data between the component and its template. Angular supports different types of data binding, including interpolation (`{{ }}`), property binding (`[ ]`), event binding (`( )`), and two-way binding (`[( )]`).
+  5. **Data Binding:** Data binding enables the synchronization of data between the component and its template. Angular supports different types of data binding, including interpolation (`{{ }}`), property binding (`[ ]`), event binding (`( )`), and two-way binding (`[( )]`).
   
-  6. Services: Services are reusable components that provide specific functionality and can be shared across multiple components. They are responsible for handling data, performing HTTP requests, and implementing business logic. Services are typically injected into components using dependency injection.
+  6. **Services:** Services are reusable components that provide specific functionality and can be shared across multiple components. They are responsible for handling data, performing HTTP requests, and implementing business logic. Services are typically injected into components using dependency injection.
   
-  7. Dependency Injection: Dependency injection is a design pattern used in Angular to manage the dependencies between different components and services. Angular's dependency injection system allows you to declare dependencies in the constructor of a component or service and have them automatically resolved and provided by the framework.
+  7. **Dependency Injection:** Dependency injection is a design pattern used in Angular to manage the dependencies between different components and services. Angular's dependency injection system allows you to declare dependencies in the constructor of a component or service and have them automatically resolved and provided by the framework.
   
-  8. Routing: Angular's router enables navigation between different views/components based on the application's URL. It allows you to define routes, associate them with components, and handle navigation events.
+  8. **Routing:** Angular's router enables navigation between different views/components based on the application's URL. It allows you to define routes, associate them with components, and handle navigation events.
   
-  9. Modules: Modules are used to organize and encapsulate related components, services, and other Angular features. They help to keep the application modular, improve code organization, and enable lazy loading of parts of the application.
+  9. **Modules:** Modules are used to organize and encapsulate related components, services, and other Angular features. They help to keep the application modular, improve code organization, and enable lazy loading of parts of the application.
   
-  10. Forms: Angular provides powerful form handling capabilities, including template-driven forms and reactive forms. Form controls, validators, and form submission handling are some of the features offered by Angular's forms module.
+  10. **Forms:** Angular provides powerful form handling capabilities, including template-driven forms and reactive forms. Form controls, validators, and form submission handling are some of the features offered by Angular's forms module.
   
-  11. Observables: Observables are a fundamental part of Angular's reactive programming approach. They represent streams of data over time and are used extensively for handling asynchronous operations, such as HTTP requests and event handling.
+  11. **Observables:** Observables are a fundamental part of Angular's reactive programming approach. They represent streams of data over time and are used extensively for handling asynchronous operations, such as HTTP requests and event handling.
+  
+  12. **Standalone:** Angular Standalone is a way to build Angular applications that do not use NgModules. NgModules are a core concept of Angular, and they provide a way to organize your code and dependencies. However, they can also add complexity to your applications.
+      
+      Angular Standalone aims to simplify the authoring experience by reducing the need for NgModules. Standalone components, directives, and pipes are simply declared as JavaScript modules. They do not need to be imported into an NgModule, and they do not have access to the NgModule's services.
+      
+      This can make it easier to write and maintain your code, especially if your application is small or simple. It can also make it easier to share components, directives, and pipes between applications.
+      
+      To use Angular Standalone, you need to add the `@angular/core:standalone` schematic to your project. This schematic will convert all of your components, directives, and pipes to standalone mode.
+      
+      You can also choose to migrate an existing Angular project to standalone mode. To do this, you need to run the `ng g @angular/core:standalone` schematic multiple times. The first time, you will select the "Convert all components, directives and pipes to standalone" option. The second time, you will select the "Remove unnecessary NgModule classes" option. The third time, you will select the "Bootstrap the project using standalone APIs" option.
+  
+  13. **Signals** : Les signaux Angular sont des primitives réactives qui permettent de définir des valeurs réactives et d'exprimer les dépendances entre elles. Ils sont basés sur le modèle d'observateur, ce qui signifie qu'ils peuvent être utilisés pour observer des valeurs et être avertis lorsqu'elles changent.
+      
+      Les signaux Angular sont utilisés pour améliorer les performances des applications Angular en réduisant le nombre de fois où le moteur de changement doit être exécuté. Lorsque le moteur de changement est exécuté, il s'assure que l'interface utilisateur reflète l'état de l'application. Les signaux Angular peuvent être utilisés pour empêcher le moteur de changement d'être exécuté lorsque les valeurs ne changent pas.
+      
+      Les signaux Angular sont également utilisés pour améliorer la lisibilité du code Angular. En utilisant des signaux, les développeurs peuvent indiquer clairement les dépendances entre les valeurs, ce qui rend le code plus facile à comprendre et à maintenir.
+  
+  14. **Route child nested** :
 
 ### FRAMEWORK
 
@@ -464,8 +527,6 @@ export class SummaryPipe implements PipeTransfrom{
 
 dd MMMM yyyy: 15 Mars 2003
 
-
-
 ### ngOnInit vs ngAfterViewInit
 
 1. `ngOnInit`:
@@ -685,5 +746,5 @@ export class AppComponent implements OnInit {
     }).subscribe((value) => console.log(value));
     obsTest.unsubscribe();
   }
-}
+}    
 ```
