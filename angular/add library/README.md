@@ -1,3 +1,13 @@
+# LIST
+
+- BOOTSTRAP
+
+- MATERIAL UI
+
+- TOASTR
+
+- SWEETALERT
+
 # BOOTSTRAP
 
 ```bash
@@ -63,7 +73,7 @@ npm install @angular/animations --save
 
 Don't want to use `@angular/animations`? See [Setup Without Animations](https://www.npmjs.com/package/ngx-toastr#setup-without-animations).
 
-## [](https://www.npmjs.com/package/ngx-toastr#setup)Setup
+## [](https://www.npmjs.com/package/ngx-toastr#setup)
 
 **step 1:** add css
 

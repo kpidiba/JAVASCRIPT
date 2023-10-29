@@ -17,5 +17,3 @@ npx cap sync
 ```
 
 - in capacitor.config.ts: change **webDir: 'dist/angular'**
-
- 

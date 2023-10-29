@@ -4,6 +4,16 @@
 
 **Angular** (communément appelé « **Angular 2+ »** ou « **Angular v2 et plus »**)[2](https://fr.wikipedia.org/wiki/Angular#cite_note-2),[3](https://fr.wikipedia.org/wiki/Angular#cite_note-3) est un *[framework](https://fr.wikipedia.org/wiki/Framework "Framework")* pour clients, [open source](https://fr.wikipedia.org/wiki/Open_source "Open source"), basé sur [TypeScript](https://fr.wikipedia.org/wiki/TypeScript "TypeScript") et codirigé par l'équipe du projet « Angular » chez [Google](https://fr.wikipedia.org/wiki/Google "Google") ainsi que par une communauté de particuliers et de sociétés. Angular est une réécriture complète d'[AngularJS](https://fr.wikipedia.org/wiki/AngularJS "AngularJS"), [cadriciel](https://fr.wikipedia.org/wiki/Cadriciel "Cadriciel") construit par la même équipe. Il permet la création d’applications Web et plus particulièrement d'[applications Web monopages](https://fr.wikipedia.org/wiki/Application_web_monopage "Application web monopage") : des applications Web accessibles via une page Web unique qui permet de fluidifier l’expérience utilisateur et d’éviter les chargements de pages à chaque nouvelle action. Le *framework* est basé sur une architecture du type [MVC](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur "Modèle-vue-contrôleur") et permet donc de séparer les données, le visuel et les actions pour une meilleure gestion des responsabilités. Un type d’architecture qui a largement fait ses preuves et qui permet une forte maintenabilité et une amélioration du travail collaboratif.
 
+### ANGULAR LAST VERSION
+
+- INSTALL NVM 
+
+- nvm install 12.18.3(node version) or nvm install latest
+
+- **nvm use** **12.18.3**
+
+- **nvm list available** 
+
 ## MIGRATION WEBSITE
 
 - https://update.angular.io/ 
@@ -55,7 +65,11 @@ Certainly, Angular is a comprehensive framework for building dynamic web applica
    - [Nihira Techiees - YouTube](https://www.youtube.com/@NihiraTechiees)
    - [Academind - YouTube](https://www.youtube.com/@academind) 
    - [Sahosoft Solutions](https://www.youtube.com/@sahosoftsolutions2343) 
-   -  [Monsterlessons Academy - YouTube](https://www.youtube.com/@MonsterlessonsAcademy) (top)
+   - [Monsterlessons Academy - YouTube](https://www.youtube.com/@MonsterlessonsAcademy) (top)
+   - [OctAcademy - YouTube](https://www.youtube.com/@OctAcademy) 
+   - https://www.youtube.com/@ArthurLannelucq
+   - [NG Poland Conf - YouTube](https://www.youtube.com/@ngPolandConf)  (Angular Conf News Ng Poland Conf)
+   - https://www.youtube.com/@LearningPartnerDigital (Projects)
 
 2. **WEBSITE**
    
@@ -204,8 +218,6 @@ components and services  to your application.
   ng generate environments
   ```
 
-- 
-
 ### LIBRARY
 
 - Library generally perform specific operation
@@ -253,6 +265,10 @@ ng g c component_name
 
 ### DIRECTIVE TYPES
 
+Directives are meant to be a function that executes when found in the 
+DOM by the Angular compiler to extend the power of the HTML with new 
+syntax
+
 - Component directive(    directive with template view)
 
 - Structural directive (which can change the DOM  layout by adding and removing DOM  elements)
@@ -270,13 +286,13 @@ ng g c component_name
 <li *ngFor="let obj of listObject">{{ obj  | json }}</li>
 ```
 
-- **ngIf**
+- **ngIf**(STRUCTURAL)
 
 ```js
 <div *ngIf="listPost.length > 0 "></div>
 ```
 
-- **ngTemplate** 
+- **ngTemplate** (STRUCTURAL)
 
 ```js
 <ng-template #emptyList>
@@ -310,7 +326,7 @@ ng g c component_name
 </div>
 ```
 
-- **ngStyle** 
+- **ngStyle** (ATTRIBUTE)
 
 ```js
 <h3 [ngStyle]="{
@@ -319,7 +335,7 @@ ng g c component_name
 }">style changing</h3>
 ```
 
-- **ngClass** 
+- **ngClass** (ATTRIBUTE)
 
 ```js
 [ngClass] = "{
@@ -332,7 +348,7 @@ ng g c component_name
 
 create variable in component.ts and use **{{  }}** to show the value in html or other
 
-### share data between component
+### SHARE DATA BETWEEN COMPONENT
 
 - Parent to Child Component via @input Decorator
 
@@ -580,6 +596,14 @@ ng g guard services/auth-service/auth
 
 ### DEPENDENCY INJECTION
 
+- TO USE IT
+
+```ts
+  constructor(private router:Router) {
+  }
+  router = inject(Router)
+```
+
 - first method: **define service class as provider in app.module.ts ,or in direct component ts file**
 
 ```ts
@@ -592,6 +616,9 @@ providers: [PostService],
 //in service class
 @Injectable({
     providedIn: 'root',
+})
+// THE SECOND :define in provider
+@Injectable({
 })
 ```
 
