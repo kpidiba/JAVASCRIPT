@@ -10,6 +10,12 @@ Electron est un [logiciel libre](https://fr.wikipedia.org/wiki/Logiciel_libre "L
 
 Electron a notamment permis de développer les éditeurs de texte libres [Atom](https://fr.wikipedia.org/wiki/Atom_(%C3%A9diteur_de_texte) "Atom (éditeur de texte)") de [GitHub](https://fr.wikipedia.org/wiki/Github_(entreprise) "Github (entreprise)") et [Visual Studio Code](https://fr.wikipedia.org/wiki/Visual_Studio_Code "Visual Studio Code") de [Microsoft](https://fr.wikipedia.org/wiki/Microsoft "Microsoft")[3](https://fr.wikipedia.org/wiki/Electron_(framework)#cite_note-:0-3).
 
+
+
+### DEPLOYMENT SOFTWARE
+
+- InnoSetup
+
 ## Histoire
 
 - Le 11 avril 2013 Création de Electron sous le nom Atom Shell en référence à l'éditeur [Atom](https://fr.wikipedia.org/wiki/Atom_(%C3%A9diteur_de_texte) "Atom (éditeur de texte)") dont il est une émanation .
@@ -30,45 +36,51 @@ Electron a notamment permis de développer les éditeurs de texte libres [Atom](
 npm install electron --save-dev
 ```
 
-- Create a new file named `index.js` in the root of your Angular project. This file will be the entry point for Electron. Add the following content to `main.js`,in **{folder}** put project folder name:
-  
-  javascript
+- full screen :
   
   ```javascript
-  const { app, BrowserWindow } = require('electron');
-  
-  let win;
-  
-  function createWindow() {
-    win = new BrowserWindow({
-      width: 800,
-      height: 600,
-      webPreferences: {
-        nodeIntegration: true,
-      },
-    });
-  
-    win.loadURL(`file://${__dirname}/dist/{folder}/index.html`);
-  
-    win.on('closed', () => {
-      win = null;
-    });
-  }
-  
-  app.on('ready', createWindow);
-  
-  app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
-      app.quit();
-    }
-  });
-  
-  app.on('activate', () => {
-    if (win === null) {
-      createWindow();
-    }
-  });
+    const { width, height } = screen.getPrimaryDisplay().workAreaSize;
   ```
+
+- Create a new file named `index.js` in the root of your Angular project. This file will be the entry point for Electron. Add the following content to `main.js`,in **{folder}** put project folder name:
+
+javascript
+
+```javascript
+const { app, BrowserWindow } = require('electron');
+
+let win;
+
+function createWindow() {
+  win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true,
+    },
+  });
+
+  win.loadURL(`file://${__dirname}/dist/{folder}/index.html`);
+
+  win.on('closed', () => {
+    win = null;
+  });
+}
+
+app.on('ready', createWindow);
+
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit();
+  }
+});
+
+app.on('activate', () => {
+  if (win === null) {
+    createWindow();
+  }
+});
+```
 
 - Update your `package.json`:
   
@@ -105,7 +117,7 @@ npm install electron --save-dev
  "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "electron": "electron index",
+    "electron": "electron .",
     "main" : "main.js",
     "build": "ng build",
     "build-electron": "ng build --prod && npm run electron",
@@ -114,22 +126,24 @@ npm install electron --save-dev
   },
 ```
 
+- npm run electron
+
 ### ELECTRON PACKAGER
 
 https://www.npmjs.com/package/electron-packager
 
 ```bash
-npm install electron-packager -g
+npm install electron-packager -g (-g is Optional)
 npm install electron-packager — save-dev
 ```
 
 to build exe 
 
 ```bash
-electron-packager . — platform=win32
+electron-packager ./ — platform=win32
 ```
 
-- download [Releases · wixtoolset/wix3 · GitHub](https://github.com/wixtoolset/wix3/releases) 
+- 
 
 - change application icon: "icon:__dirname+'/src/assets/icons/logo.jpg'" in 
 
@@ -143,3 +157,5 @@ electron-packager . — platform=win32
     icon:__dirname+'/src/assets/icons/logo.jpg'
   });
 ```
+
+**NB:** make sure you convert png to ico 
