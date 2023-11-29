@@ -47,6 +47,15 @@ my-app/
 │   │   │       └── `...`
 │   │   └── `...`
 │   ├── `shared/`
+│   │   ├── `models/`
+│   │   │   ├── `user.ts`
+│   |   |   |
+│   │   ├── `validators/`
+│   │   │   ├── `custom.valid0ator.ts/`
+│   │   ├── `dtos/`
+│   │   │   ├── `dto.ts/`
+│   │   └── `...`
+│   └── `...`
 │   │   ├── `components/`
 │   │   │   ├── `button/`
 │   │   │   │   ├── `button.component.css`

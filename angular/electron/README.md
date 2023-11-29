@@ -128,3 +128,18 @@ to build exe
 ```bash
 electron-packager . — platform=win32
 ```
+
+- download [Releases · wixtoolset/wix3 · GitHub](https://github.com/wixtoolset/wix3/releases) 
+
+- change application icon: "icon:__dirname+'/src/assets/icons/logo.jpg'" in 
+
+```js
+  win = new BrowserWindow({
+    width: 1024,
+    height: 640,
+    webPreferences: {
+      nodeIntegration: true,
+    },
+    icon:__dirname+'/src/assets/icons/logo.jpg'
+  });
+```

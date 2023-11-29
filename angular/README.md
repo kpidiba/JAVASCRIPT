@@ -1,5 +1,21 @@
 # ANGULAR
 
+### RESSOURCES
+
+- [Zoaib Khan - YouTube](https://www.youtube.com/@ZoaibKhan)
+
+- [Simon Dieny - Code Senior - YouTube](https://www.youtube.com/@codeursenior)
+
+- [Monsterlessons Academy - YouTube](https://www.youtube.com/@MonsterlessonsAcademy) 
+
+- [Joshua Morony - YouTube](https://www.youtube.com/@JoshuaMorony) 
+
+- [ng-conf - YouTube](https://www.youtube.com/@ngconfonline) 
+
+- https://www.youtube.com/@JoshuaMorony  
+
+- https://www.youtube.com/@DecodedFrontend 
+
 ### DESCRIPTION
 
 **Angular** (communément appelé « **Angular 2+ »** ou « **Angular v2 et plus »**)[2](https://fr.wikipedia.org/wiki/Angular#cite_note-2),[3](https://fr.wikipedia.org/wiki/Angular#cite_note-3) est un *[framework](https://fr.wikipedia.org/wiki/Framework "Framework")* pour clients, [open source](https://fr.wikipedia.org/wiki/Open_source "Open source"), basé sur [TypeScript](https://fr.wikipedia.org/wiki/TypeScript "TypeScript") et codirigé par l'équipe du projet « Angular » chez [Google](https://fr.wikipedia.org/wiki/Google "Google") ainsi que par une communauté de particuliers et de sociétés. Angular est une réécriture complète d'[AngularJS](https://fr.wikipedia.org/wiki/AngularJS "AngularJS"), [cadriciel](https://fr.wikipedia.org/wiki/Cadriciel "Cadriciel") construit par la même équipe. Il permet la création d’applications Web et plus particulièrement d'[applications Web monopages](https://fr.wikipedia.org/wiki/Application_web_monopage "Application web monopage") : des applications Web accessibles via une page Web unique qui permet de fluidifier l’expérience utilisateur et d’éviter les chargements de pages à chaque nouvelle action. Le *framework* est basé sur une architecture du type [MVC](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur "Modèle-vue-contrôleur") et permet donc de séparer les données, le visuel et les actions pour une meilleure gestion des responsabilités. Un type d’architecture qui a largement fait ses preuves et qui permet une forte maintenabilité et une amélioration du travail collaboratif.
@@ -383,7 +399,7 @@ ngAfterViewInit(): void {
 @Output() message_event = new EventEmitter<string>;
 sendMessage() {
     this.message_event.emit(this.secondChildM);
- }
+ }.
 //in child html
 <button (click)="sendMessage()" >Event button</button>
 //in parent html
