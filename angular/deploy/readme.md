@@ -2,14 +2,25 @@
 
 Deploying an Angular application involves several steps to ensure that your application is properly deployed and accessible to users. Here's a general outline of the deployment process:
 
-    Build the Application:
-        Use the Angular CLI (Command Line Interface) to build your application for production. Run the following command:
-    
-        css
-    
-    ng build --prod
-    
-    This will create a dist folder containing the compiled and optimized version of your application.
+    This command 
+compiles an angular application/library into an output directory named 
+dist at the given path. This command is used when you’re ready to build 
+our application and deploy it.
+
+```bash
+ng build --configuration=environment_name
+Build the Application:
+    Use the Angular CLI (Command Line Interface) to build your application for production. Run the following command
+ng build --prod
+ng build --configuration production
+This will create a dist folder containing the compiled and optimized version of your application.
+```
+
+**Example:**
+
+Consider that I have three environments like qa for testing , dev for development, and prod for production as below:
+
+![](./1%202BCaJwB3C4SNXugwjNFlyQ.webp)
 
 **Configure Base Href:**
 
@@ -53,6 +64,16 @@ Serve the application using a static file server. You can use a variety of optio
 **Security Hardening:**
 
     Implement security best practices such as using secure HTTP headers, keeping dependencies updated, and applying security patches.
+
+### RUN ANGULAR APPLICATION IN LOCAL
+
+Install **http-server** globally
+
+`npm install http-server -g`
+
+Then inside the project directory (in the terminal), I run
+
+`http-server dist/[your-project-name]`
 
 ### MAINTENANCE
 

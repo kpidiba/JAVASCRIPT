@@ -45,7 +45,7 @@ ng add @angular/material
 
 - material icons: https://fonts.google.com/icons 
 
-### TOASTR
+# TOASTR
 
 ## https://www.npmjs.com/package/ngx-toastr
 

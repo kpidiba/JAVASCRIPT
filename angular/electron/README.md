@@ -10,8 +10,6 @@ Electron est un [logiciel libre](https://fr.wikipedia.org/wiki/Logiciel_libre "L
 
 Electron a notamment permis de développer les éditeurs de texte libres [Atom](https://fr.wikipedia.org/wiki/Atom_(%C3%A9diteur_de_texte) "Atom (éditeur de texte)") de [GitHub](https://fr.wikipedia.org/wiki/Github_(entreprise) "Github (entreprise)") et [Visual Studio Code](https://fr.wikipedia.org/wiki/Visual_Studio_Code "Visual Studio Code") de [Microsoft](https://fr.wikipedia.org/wiki/Microsoft "Microsoft")[3](https://fr.wikipedia.org/wiki/Electron_(framework)#cite_note-:0-3).
 
-
-
 ### DEPLOYMENT SOFTWARE
 
 - InnoSetup
@@ -140,10 +138,8 @@ npm install electron-packager — save-dev
 to build exe 
 
 ```bash
-electron-packager ./ — platform=win32
+electron-packager ./ name_of_project
 ```
-
-- 
 
 - change application icon: "icon:__dirname+'/src/assets/icons/logo.jpg'" in 
 
@@ -159,3 +155,15 @@ electron-packager ./ — platform=win32
 ```
 
 **NB:** make sure you convert png to ico 
+
+### HOW TO DEPLOY WITH INNO SETUP
+
+- after install  choose **Create a new script file using the Script Wizard** 
+
+- Fill required field
+
+- Choose Executable
+
+- choose Add Files
+
+- create folder and add all folders after click add Folder

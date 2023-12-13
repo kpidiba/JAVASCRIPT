@@ -157,7 +157,7 @@ const pokemonRoutes = Routes = [
 
 - Delete app.module.ts
 
-- clear it and add in main.ts
+- clear  and add in main.ts
 
 - routes (**Main routes in main.ts**)
 
