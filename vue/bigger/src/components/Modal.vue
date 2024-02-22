@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div class="backdrop" @click.self="closeModal">
     <div class="modal" :class="{ sale: salaire === 'salaire' }">
       <div class="actions">

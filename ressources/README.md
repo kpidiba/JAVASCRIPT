@@ -22,6 +22,4 @@ This contains all javascript documentation whether youtube channels or website
 
 - [Codevolution - YouTube](https://www.youtube.com/@Codevolution)
 
-- [LearnVue - YouTube](https://www.youtube.com/@LearnVue)
-
-- 
+- [LearnVue - YouTube](https://www.youtube.com/@LearnVue) 

@@ -71,5 +71,3 @@ methods:{
 ```
 
 - **v-show** to show an element or not ,**boolean** value, use display:none; don't remove element from the dom
-
-- 

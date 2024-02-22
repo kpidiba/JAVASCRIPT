@@ -42,3 +42,5 @@ vercel(root of the project)
 - choose the framework
 
 - Choose the root directory of the project
+
+NB: All is in main branch

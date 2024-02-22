@@ -1,5 +1,15 @@
 # VUE
 
+### DOCUMENTATION
+
+- https://vuejs.org/
+
+- [Examples | Vue.js](https://vuejs.org/examples) 
+
+- [Tutorial | Vue.js](https://vuejs.org/tutorial) 
+
+- https://pinia.vuejs.org/ 
+
 ### INSTALLATION
 
 - install npm : go to https://nodejs.org/ and download it
@@ -61,3 +71,7 @@ Deux approches des SPA:
 - Soit utilisation du serveur [HTTP](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol "Hypertext Transfer Protocol") avec lequel elles échangent données, continuations applicatives et interfaces, mais sans rechargement complet de la page, ce qui permet une [expérience utilisateur](https://fr.wikipedia.org/wiki/Exp%C3%A9rience_utilisateur "Expérience utilisateur") beaucoup plus fluide, les échanges réseau étant réduit.
 
 [TiddlyWiki](https://fr.wikipedia.org/wiki/TiddlyWiki "TiddlyWiki") est un exemple d'application Web monopage qui permet de créer un journal personnel au format HTML. Cette application peut fonctionner en local et sauvegarder vos modifications en ligne grâce à des plugins sur [GitHub](https://fr.wikipedia.org/wiki/GitHub "GitHub") ou [DropBox](https://fr.wikipedia.org/wiki/Dropbox "Dropbox") par exemple.
+
+### ALL VUE JS CONCEPTS
+
+- 

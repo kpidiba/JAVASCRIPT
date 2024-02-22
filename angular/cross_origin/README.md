@@ -1,6 +1,6 @@
 # CORS Error
 
--  https://www.youtube.com/watch?v=uMJnAxapF7E 
+- https://www.youtube.com/watch?v=uMJnAxapF7E 
 
 Cross-Origin-Resources-Sharing Error, only happen in browsers when frontend tries to access  a backend which doesn't have the same URL , browser throws an error
 
