@@ -20,7 +20,17 @@
 
 - [Angularistic - YouTube](https://www.youtube.com/@angularistic) 
 
-- 
+- [Angular University - YouTube](https://www.youtube.com/@AngularUniversity) 
+
+- https://dyma.fr/developer/list/chapters/core (Learning course)
+
+### TEMPLATES
+
+- https://therichpost.com/ 
+
+- https://flowbite.com/ 
+
+- [The most popular admin dashboard based on Angular 9+ and Nebular.](https://akveo.github.io/ngx-admin/material) 
 
 ### DESCRIPTION
 
